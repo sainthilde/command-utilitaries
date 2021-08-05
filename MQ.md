@@ -53,63 +53,50 @@ utilizando el siguiente mandato para visualizar todos los gestores de colas
 
 ------------
 
-#######################################
-##### 	mandatos MQSC  		 ######
-#######################################
 
-runmqsc
-==> Como en este mandato no se ha especificado un nombre de gestor de colas, 
-==> los mandatos MQSC los procesa el gestor de colas predeterminado
+## 	mandatos MQSC 
+> 
+> runmqsc
+* Como en este mandato no se ha especificado un nombre de gestor de colas, los mandatos MQSC los procesa el gestor de colas predeterminado
+> 
+> runmqsc SATURN.QUEUE.MANAGER
 
-runmqsc SATURN.QUEUE.MANAGER
+## mandatos MQSC desde archivos de texto
+> 
+> runmqsc < myprog.in
+> 
+> runmqsc SATURN.QUEUE.MANAGER < myprog.in
+* ejecuta una secuencia de mandatos contenida en el archivo de texto myprog.in
+> 
+> runmqsc < myprog.in > myprog.out
+> 
+> runmqsc SATURN.QUEUE.MANAGER < myprog.in > myprog.out
 
-#######################################
-#mandatos MQSC desde archivos de texto#
-#######################################
-
-runmqsc < myprog.in
-runmqsc SATURN.QUEUE.MANAGER < myprog.in
-==>ejecuta una secuencia de mandatos contenida en el archivo de texto myprog.in
-
-runmqsc < myprog.in > myprog.out
-runmqsc SATURN.QUEUE.MANAGER < myprog.in > myprog.out
-
-
-##### runmqsc para verificar mandatos #########
-
+## runmqsc para verificar mandatos
 Para ello, establezca el indicador -v en el mandato runmqsc
+> 
+> runmqsc -v < myprog.in > myprog.out
+> 
+> runmqsc -v jupiter.queue.manager < myprog.in > myprog.out
+> 
+> runmqsc -w 30 -v jupiter.queue.manager < myprog.in > myprog.out
+* No puede utilizar este método para verificar los mandatos MQSC de forma remota
+* el indicador -w, que se utiliza para indicar que el gestor de colas es remoto, 
+* se ignora y el mandato se ejecuta localmente en modalidad de verificación
 
-runmqsc -v < myprog.in > myprog.out
-runmqsc -v jupiter.queue.manager < myprog.in > myprog.out
+## Visualización de atributos de un queue manager
+> 
+> 1ero runmqsc SATURN.QUEUE.MANAGER
+> 
+> 2do  DISPLAY QMGR
 
-runmqsc -w 30 -v jupiter.queue.manager < myprog.in > myprog.out
-==> No puede utilizar este método para verificar los mandatos MQSC de forma remota
-==> el indicador -w, que se utiliza para indicar que el gestor de colas es remoto, 
-==> se ignora y el mandato se ejecuta localmente en modalidad de verificación
+## modificacion de atributos de un queue manager
+> 
+> 1ero runmqsc SATURN.QUEUE.MANAGER
+> 
+> 2do  ALTER QMGR DEADQ (ANOTHERDLQ) INHIBTEV (ENABLED)
 
-
-
-
-##########################################################
-##### Visualización de atributos de un queue manager #####
-##########################################################
-
-1ero runmqsc SATURN.QUEUE.MANAGER
-2do  DISPLAY QMGR
-
-
-##########################################################
-##### modificacion de atributos de un queue manager  #####
-##########################################################
-
-1ero runmqsc SATURN.QUEUE.MANAGER
-2do  ALTER QMGR DEADQ (ANOTHERDLQ) INHIBTEV (ENABLED)
-
-
-#######################################
-###  Definición de una cola local   ###
-#######################################
-
+## Definición de una cola local
 
 El nombre de la cola local por omisión es SYSTEM.DEFAULT.LOCAL.QUEUE  se ha creado durante la instalación 
 
