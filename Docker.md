@@ -1,3 +1,9 @@
+# START / STOP SERVICE
+
+> sudo systemctl start docker
+> 
+> sudo systemctl stop docker
+
 ## APACHE TOMCAT
 
 > docker run -d --name tomcat9 -p 8888:8080 tomcat:9.0
@@ -60,3 +66,8 @@
 >   
 > docker rm -f 7dcbc2811678
 
+## Hashicorp Vault
+  
+> docker run --cap-add=IPC_LOCK -e 'VAULT_DEV_ROOT_TOKEN_ID=myroot' -e 'VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:1234' -p 8200:1234 vault
+> 
+> ====> http://127.0.0.1:8200/ui/
