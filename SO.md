@@ -6,3 +6,10 @@
 |  taskkill   | taskkill /f /im smc.exe                                                                  | Matar el proceso  | 
 |  getmac     | getmac                                                                                   | Obtener MAC de la PC | 
 
+### LINUX
+
+| Comand      | Sample                                                                                   | Description  | 
+| ---------   | ------------------------------------------------------------------------------------     | ------------ | 
+|  kill       | kill -9 \<id process\>                                                                     | Matar el proceso  | 
+|             | ps -ef  \| grep bip                                                                        |  | 
+
