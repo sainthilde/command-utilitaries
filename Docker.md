@@ -2,6 +2,8 @@
 
 ## Utilitarios
 
+> yum clean all
+> 
 > sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 
 ## Agregar el repo de docker
@@ -11,6 +13,8 @@
 ## Instalar
 
 > sudo yum install docker-ce -y
+>
+> sudo yum install docker-ce -y --allowerasing
 
 ## Iniciarlo con el sistema
 
