@@ -12,6 +12,16 @@
 
 > sudo yum install docker-ce -y
 
+## Iniciarlo con el sistema
+
+> sudo systemctl enable docker
+
+## Agregar usuario al grupo docker 
+
+> whoami ====> Saber el nombre de tu usuario
+> 
+> sudo usermod -aG docker <nombre_de_salida_en_whoami>
+
 # START / STOP SERVICE
 
 > sudo systemctl start docker
