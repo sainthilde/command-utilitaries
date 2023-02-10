@@ -68,6 +68,42 @@
 > 
 > port:3333
 
+## POSTGRES
+
+> docker pull postgres
+> 
+> docker run --name myPostgresDb -p 5455:5432 -e POSTGRES_USER=postgresUser -e POSTGRES_PASSWORD=postgresPW -e POSTGRES_DB=postgresDB -d postgres
+> 
+> docker inspect 77073c8e7c7d
+> 
+> docker container ls 
+> 
+> docker stop 77073c8e7c7d
+> 
+> docker start 77073c8e7c7d
+> 
+> docker rm -f 77073c8e7c7d
+> 
+> docker image rm -f 77073c8e7c7d
+> 
+> docker exec -it myPostgresDb bash
+> 
+
+> docker pull dpage/pgadmin4
+> 
+> docker run -p 80:80 -e 'PGADMIN_DEFAULT_EMAIL=sainthilde@gmail.com' -e 'PGADMIN_DEFAULT_PASSWORD=postgresPW' -d dpage/pgadmin4
+>
+> http://localhost/browser/
+> 
+> connect params: 172.17.0.2 + credentials
+> 
+
+## SQL SERVER 2019
+
+> docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Suprime2252" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+> 
+> connect params: user=sa password=Suprime2252
+
 ## WebSphere MQ
 
 > docker run --env LICENSE=accept --env MQ_QMGR_NAME=QM1 --publish 1414:1414 --publish 9443:9443 --detach ibmcom/mq
