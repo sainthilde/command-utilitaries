@@ -74,7 +74,7 @@
 > 
 > docker run --name myPostgresDb -p 5455:5432 -e POSTGRES_USER=postgresUser -e POSTGRES_PASSWORD=postgresPW -e POSTGRES_DB=postgresDB -d postgres
 > 
-> docker inspect 77073c8e7c7d
+> docker inspect 77073c8e7c7d  ---> **Permite obtener el IP**
 > 
 > docker container ls 
 > 
