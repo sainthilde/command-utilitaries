@@ -68,6 +68,23 @@
 > 
 > port:3333
 
+## MONGO
+
+> docker pull mongo
+> 
+> docker run -d --name mongodb -p 27017:27017 mongo
+> 
+> docker exec –it mongodb mongosh
+> 
+> docker inspect 32f4175e105b
+> 
+> user:admin
+> 
+> password:password
+> 
+> port:27017
+
+
 ## POSTGRES
 
 > docker pull postgres
