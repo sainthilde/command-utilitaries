@@ -32,6 +32,26 @@
 > 
 > sudo systemctl stop docker
 
+## NGROK
+
+> docker run -it -e NGROK_AUTHTOKEN=\<token> ngrok/ngrok **http 80**
+>
+> El **http 80** reemplazar por ejemplo con **tcp \<ip>:\<puerto>**
+>
+> Para obtener el \<token> ingresar a ====>  https://dashboard.ngrok.com/login 
+
+## WSO2 API Manager
+
+> docker run --name api-manager -p 8280:8280 -p 8243:8243 -p 9443:9443 wso2/wso2am:4.0.0
+>
+> https://localhost:9443/{service-name}
+>
+> service-name => [carbon, publisher, devportal]
+>
+> **user/pass** => admin/admin
+> 
+> ====> https://blog.programster.org/deploy-wso2-api-manager-with-docker
+
 ## APACHE TOMCAT
 
 > docker run -d --name tomcat9 -p 8888:8080 tomcat:9.0
