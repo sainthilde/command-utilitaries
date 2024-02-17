@@ -103,6 +103,8 @@
 > docker run -d --name mongodb -p 27017:27017 mongo
 > 
 > docker exec –it mongodb mongosh
+>
+> docker exec -it e884ebef3f36 mongosh
 > 
 > docker inspect 32f4175e105b
 > 
