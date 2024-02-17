@@ -40,6 +40,14 @@
 >
 > Para obtener el \<token> ingresar a ====>  https://dashboard.ngrok.com/login 
 
+## RABBIT MQ
+
+> docker run -d --hostname rabbit --name rabbit-server -p 15672:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password rabbitmq:3-management
+>
+> El puerto **15672** es del UI y el puero **5672** es del rabbit broker
+>
+> Para ingresar user/password ====>  http://localhost:15672
+
 ## WSO2 API Manager
 
 > docker run --name api-manager -p 8280:8280 -p 8243:8243 -p 9443:9443 wso2/wso2am:4.0.0
