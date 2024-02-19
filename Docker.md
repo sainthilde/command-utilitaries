@@ -40,6 +40,16 @@
 >
 > Para obtener el \<token> ingresar a ====>  https://dashboard.ngrok.com/login 
 
+## JENKINS
+
+> docker pull jenkins/jenkins:jdk17
+>
+> docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home jenkins/jenkins:jdk17
+> 
+> admin / passwrod - saint / saint@sanctuary.com
+>
+> Para ingresar ====>  http://localhost:8080
+
 ## RABBIT MQ
 
 > docker run -d --hostname rabbit --name rabbit-server -p 15672:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password rabbitmq:3-management
